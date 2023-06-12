@@ -35,8 +35,26 @@ $.ajax({
 function detail(stringUrl) {
     $.ajax({
         url: stringUrl
-    }).done((res) => {
+    }).done(function (res) {
         console.log(res);
-        $(".modal-title").html(res.name)
-    })
+        $("#pokeName").text(res.name);
+        $("#pokeWeight").text("Weight: " + res.weight);
+        $("#pokeHeight").text("Height: " + res.height);
+        $("#pokeHP").text("HP: " + res.stats[0].base_stat);
+        $("#pokeMoves").text("Moves: " + res.moves[0].move.name);
+        $("#pokeAbility").text("Ability: " + res.abilities[0].ability.name);
+        $("#pokeImage").attr("src", res.sprites.front_default);
+
+        $("#pokeATK").text("Atk: " + res.stats[1].base_stat);
+        $("#pokeDEF").text("Def: " + res.stats[2].base_stat);
+        $("#pokeSATK").text("S.Atk: " + res.stats[3].base_stat);
+        $("#pokeSDEF").text("S.Def: " + res.stats[4].base_stat);
+        $("#modalPoke").modal("show");
+    });
 }
+
+//$(`.modal-body`).html(`
+// <div class="container-fluid">
+//        <div class="row">
+//            <div class="col-md-4">
+//`)

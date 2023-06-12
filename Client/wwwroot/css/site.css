@@ -16,3 +16,43 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#pokeImage {
+    float: left;
+    margin: 20px;
+    position: relative;
+    left: 35px;
+    bottom: 12px;
+    width: 190px;
+    height: 254px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+}
+
+.cards{
+    position:relative;
+    left: 70px;
+    top: 12px;
+}
+
+.cards-2 {
+    float: right;
+    position: relative;
+    left: 100px;
+    bottom: 202px;
+    margin: 15px;
+    padding-right: 50px;
+}
+
+.modal-footer{
+    float:right;
+    position: relative;
+    left: 80px;
+}
+
+#pokeName {
+    position: relative;
+    left: 60px;
+    text-transform: uppercase;
+}
+
